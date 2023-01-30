@@ -31,6 +31,8 @@ export default function Home() {
   const indexOfLastRepo = currentPage * reposPerPage;
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepo = repo.slice(indexOfFirstRepo, indexOfLastRepo);
+  
+
 
   return (
     <>
@@ -42,7 +44,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <h1>Public Repos</h1>
+          <h1>Public Repository</h1>
           <Repos repos={currentRepo} loading={isLoading} />
           <Pagination reposPerPage={reposPerPage} totalRepos={repo.length} curPage={currentPage} setCurPage={setCurrentPage} />
         </div>
