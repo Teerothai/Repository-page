@@ -2,13 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import { use, useEffect, useState } from "react";
+import { SetStateAction, use, useEffect, useState } from "react";
 import { Repository } from "@/type/Repository";
 import Repos from "@/component/Repos";
+import Pagination from "@/component/Pagination";
 
 
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [repo, setRepo] = useState<Repository[]>([]);
@@ -45,6 +44,7 @@ export default function Home() {
         <div>
           <h1>Public Repos</h1>
           <Repos repos={currentRepo} loading={isLoading} />
+          <Pagination reposPerPage={reposPerPage} totalRepos={repo.length} curPage={currentPage} setCurPage={setCurrentPage} />
         </div>
       </main>
     </>
