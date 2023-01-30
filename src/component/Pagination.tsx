@@ -25,11 +25,13 @@ const Pagination: React.FC<props> = ({ reposPerPage, totalRepos, curPage, setCur
     
     return (
         <nav>
+                <button key="previous" onClick={() => setCurPage(curPage-1)}>Previous</button>
                 {pageNumber.map(number => (
                     <button key={number} onClick={() => setCurPage(number)}>
                         {number}
                     </button>
                 ))}
+                <button key="next" onClick={() => setCurPage(curPage+1)}>Next</button>
         </nav>
     )
 }
