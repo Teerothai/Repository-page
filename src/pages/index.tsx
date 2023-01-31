@@ -4,9 +4,8 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { SetStateAction, use, useEffect, useState } from "react";
 import { Repository } from "@/type/Repository";
-import Repos from "@/component/Repos";
-import Pagination from "@/component/Pagination";
-
+import Repos from "@/component/Repos/RepositoryPage";
+import Pagination from "@/component/Pagination/Pagination";
 
 
 export default function Home() {
@@ -44,7 +43,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <h1>Public Repository</h1>
+          <h1 className={styles.header}>Public Repository</h1>
           <Repos repos={currentRepo} loading={isLoading} />
           <Pagination reposPerPage={reposPerPage} totalRepos={repo.length} curPage={currentPage} setCurPage={setCurrentPage} />
         </div>
@@ -52,3 +51,9 @@ export default function Home() {
     </>
   )
 }
+
+
+// card-info อยู่ตรงกลาง
+// เอาตัวที่เกินมาจากบรรทัดตบลงมา
+// ทำเป็น responsive     1. จาก 5column เหลือ2 2. text อาจจะต้อง fontsizeเล็กลง
+//     3. 

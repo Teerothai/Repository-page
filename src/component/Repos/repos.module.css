@@ -1,0 +1,136 @@
+/* Repos component */
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+} */
+
+.text{
+    color:#BD4D24;
+}
+
+.card-content{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    /* text-align: left; */
+    margin: 40px;
+}
+
+.card{
+    /* position: relative; */
+    background: #fff;
+    min-width: 400px;
+    height: 350px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 15px;
+    /* overflow: break-word; */
+    /* padding: 20px; */
+    /* border: 1px solid black; */
+}
+
+.card-info{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding: 15px;
+    /* overflow: hidden; */
+    height: 90%;
+}
+
+.card-info h3{
+    font-size: 2em;
+    font-weight: 800;
+    /* margin-bottom: 5px; */
+    padding: none;
+    margin-top: 10px;
+    height: 20%;
+    white-space: normal;
+}
+
+.card-info p:not(.description){
+    font-size: 1em;
+    margin: 2px 0;
+    height: 10%;
+}
+
+.card-info p span{
+    font-size: 1em;
+    font-weight: 1000;
+}
+
+.description{
+    font-size: 1em;
+    margin: 2px 0;
+    height: 25%;
+}
+
+.bold{
+    font-weight: 1000;
+}
+
+.repo-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 600px) {
+    .repo-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .repo-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+    }
+
+    .card{
+        /* position: relative; */
+        background: #fff;
+        min-width: 250px;
+        width: 280px;
+        height: 300px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        border-radius: 10px;
+        /* overflow: break-word; */
+        /* padding: 20px; */
+        /* border: 1px solid black; */
+    }
+
+    .card-info h3{
+        font-size: 1.5em;
+        font-weight: 800;
+        /* margin-bottom: 5px; */
+        padding: none;
+        margin-top: 10px;
+        height: 20%;
+        white-space: normal;
+    }
+
+    .card-info p:not(.description){
+        font-size: 0.95em;
+        margin: 2px 0;
+        height: 10%;
+    }
+    
+    .description{
+        font-size: 0.95em;
+        margin: 2px 0;
+        height: 25%;
+    }
+    
+    .card-info p span{
+        font-size: 1em;
+        font-weight: 1000;
+    }
+}

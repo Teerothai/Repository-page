@@ -1,1 +1,23 @@
+.header{
+    color: #0AB1CE;
+    font-size: 50px;
+    text-align: center;
+}
 
+
+@media only screen and (max-width: 600px) {
+    .header{
+        color: #0AB1CE;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header{
+        color: #0AB1CE;
+        font-size: 35px;
+        text-align: center;
+    }
+}

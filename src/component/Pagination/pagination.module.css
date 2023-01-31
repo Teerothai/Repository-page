@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* give to prev, next, number button */
+.margin-side{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.text-in-button{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* give to nav bar */
+
+.stay-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 135px;
+    width: 100%;
+}
+
+/* give to prev, next button */
+.prev-button{
+    border-radius: 25px;
+    border: 2px solid;
+    padding: 15px;
+    width: 8%;
+    height: 3%;
+    background-color: #0AB1CE;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.next-button{
+    border-radius: 25px;
+    border: 2px solid;
+    padding: 15px;
+    width: 8%;
+    height: 3%;
+    background-color: #0AB1CE;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.prev-button:hover{
+    transform: translateX(-5px);
+}
+
+.next-button:hover{
+    transform: translateX(5px);
+}
+
+/* give to number button */
+.circle-button{
+    border-radius: 50%;
+    border-color: #ccc;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+    background:#ccc;
+    color: white;
+    cursor: pointer;
+    width: 45px;
+}
+
+.active{
+    background-color: #0AB1CE;
+}
+
+.disable{
+    background-color: #ccc;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 600px) {
+    .circle-button{
+        border-radius: 50%;
+        border-color: #ccc;
+        box-shadow: 0 1px 5px rgb(1 1 1 / 10%);
+        background:#ccc;
+        color: white;
+        cursor: pointer;
+        width: 30px;
+    }
+    .active{
+        background-color: #0AB1CE;
+    }
+    
+    .disable{
+        background-color: #ccc;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .circle-button{
+        border-radius: 50%;
+        border-color: #ccc;
+        box-shadow: 0 3px 15px rgb(1 1 1 / 10%);
+        background:#ccc;
+        color: white;
+        cursor: pointer;
+        width: 37.5px;
+    }
+    .active{
+        background-color: #0AB1CE;
+    }
+    
+    .disable{
+        background-color: #ccc;
+    }
+}
