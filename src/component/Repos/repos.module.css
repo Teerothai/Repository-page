@@ -1,136 +1,109 @@
-/* Repos component */
-/* .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: fit-content;
-} */
-
 .text{
-    color:#BD4D24;
+    color: #bd4d24;
+    padding-bottom: 5px;
+    margin-block: 0;
 }
 
-.card-content{
-    /* display: flex;
-    justify-content: center;
+.text2{
+    margin-block: 0; 
+    color: "#8A97AB";
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap; */
-    /* text-align: left; */
+    justify-content: flex-start;
+    background-image: linear-gradient(
+      330.4deg,
+      rgb(68, 188, 240) 4.54%,
+      rgb(114, 152, 248) 59.2%,
+      rgb(160, 153, 255) 148.85%
+    );
+    background-repeat: no-repeat;
+}
+
+.avatar-container {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+.card-avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.card-content{
     margin: 40px;
 }
 
 .card{
-    /* position: relative; */
     background: #fff;
-    min-width: 400px;
-    height: 350px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    height: 380px;
     border-radius: 15px;
-    /* overflow: break-word; */
-    /* padding: 20px; */
-    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.card:hover{
+    border: 1px solid #ff5a00;
+    cursor: pointer;
 }
 
 .card-info{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    padding: 15px;
-    /* overflow: hidden; */
-    height: 90%;
-}
-
-.card-info h3{
-    font-size: 2em;
-    font-weight: 800;
-    /* margin-bottom: 5px; */
-    padding: none;
-    margin-top: 10px;
-    height: 20%;
-    white-space: normal;
-}
-
-.card-info p:not(.description){
-    font-size: 1em;
-    margin: 2px 0;
-    height: 10%;
-}
-
-.card-info p span{
-    font-size: 1em;
-    font-weight: 1000;
-}
-
-.description{
-    font-size: 1em;
-    margin: 2px 0;
-    height: 25%;
-}
-
-.bold{
-    font-weight: 1000;
+    padding: 20px;
 }
 
 .repo-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-}
+    grid-template-columns: repeat(5, 1fr);
+} 
 
 /*//////////////////////////////////////////////////////////////////*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 768px){
     .repo-grid {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        background: #fff;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
     }
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
     .repo-grid {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
         padding: 10px;
     }
 
     .card{
-        /* position: relative; */
         background: #fff;
-        min-width: 250px;
-        width: 280px;
-        height: 300px;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-        border-radius: 10px;
-        /* overflow: break-word; */
-        /* padding: 20px; */
-        /* border: 1px solid black; */
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
     }
+}
 
-    .card-info h3{
-        font-size: 1.5em;
-        font-weight: 800;
-        /* margin-bottom: 5px; */
-        padding: none;
-        margin-top: 10px;
-        height: 20%;
-        white-space: normal;
+@media only screen and (min-width: 1200px) and (max-width: 1700px) {
+    .repo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
     }
+}
 
-    .card-info p:not(.description){
-        font-size: 0.95em;
-        margin: 2px 0;
-        height: 10%;
-    }
-    
-    .description{
-        font-size: 0.95em;
-        margin: 2px 0;
-        height: 25%;
-    }
-    
-    .card-info p span{
-        font-size: 1em;
-        font-weight: 1000;
+@media only screen and (min-width: 1700px) and (max-width: 2100px) {
+    .repo-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 10px;
     }
 }

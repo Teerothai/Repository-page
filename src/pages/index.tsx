@@ -52,8 +52,3 @@ export default function Home() {
   )
 }
 
-
-// card-info อยู่ตรงกลาง
-// เอาตัวที่เกินมาจากบรรทัดตบลงมา
-// ทำเป็น responsive     1. จาก 5column เหลือ2 2. text อาจจะต้อง fontsizeเล็กลง
-//     3. 

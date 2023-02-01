@@ -11,16 +11,8 @@ interface props{
 
 
 const Pagination: React.FC<props> = ({ reposPerPage, totalRepos, curPage, setCurPage }) => {
-    
-    // const [pageNumber, setPageNumber] = useState<number[]>([]);
-    
-    // useEffect(() => {
-    //     setPageNumber(Array.from(Array(totalRepos/reposPerPage).keys()))
-    // },[]);
-    //Change page
 
     const pageNumber = [];
-    // const paginate = (pageNumber: number/* pageNumber: SetStateAction<number> */) => setCurPage(pageNumber);
 
     for (let i=1; i<= Math.ceil(totalRepos / reposPerPage); i++) {
         pageNumber.push(i);
@@ -28,8 +20,8 @@ const Pagination: React.FC<props> = ({ reposPerPage, totalRepos, curPage, setCur
 
     function handleClick(number: number){
         setCurPage(number);
-
     }
+    
     const PrevPageButton: React.FC = () => {
         if (curPage == 1){
             return (<button 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* give to prev, next, number button */
 .margin-side{
@@ -13,7 +13,6 @@
 
 
 /* give to nav bar */
-
 .stay-center {
     display: flex;
     justify-content: center;
@@ -24,28 +23,18 @@
 }
 
 /* give to prev, next button */
-.prev-button{
+.prev-button, .next-button{
     border-radius: 25px;
     border: 2px solid;
     padding: 15px;
     width: 8%;
     height: 3%;
-    background-color: #0AB1CE;
+    background-color: #3888ff;
     cursor: pointer;
     transition: 0.3s ease;
     color: white;
-}
-
-.next-button{
-    border-radius: 25px;
-    border: 2px solid;
-    padding: 15px;
-    width: 8%;
-    height: 3%;
-    background-color: #0AB1CE;
-    cursor: pointer;
-    transition: 0.3s ease;
-    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .prev-button:hover{
@@ -58,61 +47,55 @@
 
 /* give to number button */
 .circle-button{
+    border: 1px solid transparent;
     border-radius: 50%;
-    border-color: #ccc;
-    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
-    background:#ccc;
+    background: #b2bac8;
     color: white;
     cursor: pointer;
-    width: 45px;
+    width: 40px;
+    height: 40px;
 }
 
 .active{
-    background-color: #0AB1CE;
+    background-color: #3888ff;
 }
 
 .disable{
-    background-color: #ccc;
+    background-color: #b2bac8;
 }
 
 
 /*////////////////////////////////////////////////////////////////////////*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 768px){
     .circle-button{
         border-radius: 50%;
-        border-color: #ccc;
+        border: 1px solid transparent;
         box-shadow: 0 1px 5px rgb(1 1 1 / 10%);
-        background:#ccc;
+        background:#b2bac8;
         color: white;
         cursor: pointer;
         width: 30px;
+        height: 35px;
     }
     .active{
-        background-color: #0AB1CE;
+        background-color: #3888ff;
     }
     
     .disable{
-        background-color: #ccc;
+        background-color: #b2bac8;
     }
-}
 
-
-@media only screen and (max-width: 768px) {
-    .circle-button{
-        border-radius: 50%;
-        border-color: #ccc;
-        box-shadow: 0 3px 15px rgb(1 1 1 / 10%);
-        background:#ccc;
-        color: white;
+    .prev-button, .next-button{
+        border-radius: 25px;
+        border: 2px solid;
+        padding: 15px;
+        width: 8%;
+        height: 3%;
+        background-color: #3888ff;
         cursor: pointer;
-        width: 37.5px;
-    }
-    .active{
-        background-color: #0AB1CE;
-    }
-    
-    .disable{
-        background-color: #ccc;
+        transition: 0.3s ease;
+        color: white;
+        font-size: 10px;
     }
 }
