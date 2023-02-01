@@ -67,6 +67,36 @@
 
 /*////////////////////////////////////////////////////////////////////////*/
 
+@media only screen and (max-width: 500px){
+    .circle-button{
+        border-radius: 50%;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 5px rgb(1 1 1 / 10%);
+        background:#b2bac8;
+        color: white;
+        cursor: pointer;
+        width: 20px;
+        height: 25px;
+        font-size: 8px;
+    }
+    .active{
+        background-color: #3888ff;
+    }
+    
+    .disable{
+        background-color: #b2bac8;
+    }
+
+    .prev-button, .next-button{
+        display: none;
+    }
+    .margin-side{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+}
+
+
 @media only screen and (min-width: 500px) and (max-width: 768px){
     .circle-button{
         border-radius: 50%;
@@ -87,15 +117,11 @@
     }
 
     .prev-button, .next-button{
-        border-radius: 25px;
-        border: 2px solid;
-        padding: 15px;
-        width: 8%;
-        height: 3%;
-        background-color: #3888ff;
-        cursor: pointer;
-        transition: 0.3s ease;
-        color: white;
-        font-size: 10px;
+        display: none;
+    }
+
+    .margin-side{
+        margin-left: 1%;
+        margin-right: 1%;
     }
 }
